@@ -1,9 +1,10 @@
-// import "./App.scss";
+import "./App.scss";
 import { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-// import PageHeader from "./components/PageHeader/PageHeader.js";
+import PageHeader from "./components/PageHeader/PageHeader.js";
 // import Home from "./pages/Home/Home";
-// import Upload from "./pages/Upload/Upload";
+// import Feedback from "./pages/Feedback/Feedback";
+// import Dashboard from "./pages/Dashboard/Dashboard";
 
 document.title = "Take5";
 
@@ -12,12 +13,12 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          {/* <PageHeader /> */}
-          <Switch>
-            {/* <Route path="/" exact component={Home} /> */}
-            {/* <Route path="/Upload" component={Upload} />
-            <Route path="/videos/:id" component={Home} /> */}
-          </Switch>
+          <PageHeader />
+          {/* <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/Feedback" component={Feedback} />
+            <Route path="/Dashboard" component={Dashboard} />
+          </Switch> */}
         </BrowserRouter>
       </>
     );
