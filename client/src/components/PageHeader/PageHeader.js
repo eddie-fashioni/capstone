@@ -7,7 +7,6 @@ const PageHeader = () => {
   return (
     <nav className="nav-bar">
       <div className="nav-user">
-        {/* <span className="nav-user__initials">EF</span> */}
         <img className="nav-user__avatar" src={user} alt="User profile" />
       </div>
       <div className="nav-container">
