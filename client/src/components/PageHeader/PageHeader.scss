@@ -3,35 +3,29 @@
 
 .nav-bar {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-color: black;
   padding: 0.5rem 0 1rem 0;
-  @include tablet {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.25rem 2rem;
-  }
-  @include desktop {
-    margin: 0 7.5rem;
-  }
 }
 
 .nav-logo {
   display: flex;
   justify-content: center;
-  padding: 0.5rem 0;
-  @include tablet {
-    width: 35%;
-    justify-content: flex-start;
-  }
-  @include desktop {
-    width: 85%;
-  }
+  padding: 0.25rem 0;
 
   &__image {
     width: 75px;
+  }
+}
+
+.nav-user {
+  width: 20%;
+  padding: 0.5rem 0 0 1.25rem;
+
+  &__avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+    border-radius: 100%;
   }
 }
 
@@ -42,5 +36,5 @@
 }
 
 .active {
-  color: $secondary-color-blue;
+  color: $primary-color-blue;
 }
