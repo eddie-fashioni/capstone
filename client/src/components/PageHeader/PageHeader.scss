@@ -1,0 +1,40 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.nav-bar {
+  display: flex;
+  background-color: black;
+  padding: 0.5rem 0 1rem 0;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem 0;
+
+  &__image {
+    width: 75px;
+  }
+}
+
+.nav-user {
+  width: 20%;
+  padding: 0.5rem 0 0 1.25rem;
+
+  &__avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+}
+
+.nav-routes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.active {
+  color: $primary-color-blue;
+}
