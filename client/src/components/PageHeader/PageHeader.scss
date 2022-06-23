@@ -3,9 +3,10 @@
 
 .nav-bar {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background-color: black;
-  padding: 0.5rem 0 2rem 0;
+  padding: 0.5rem 0 1rem 0;
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
@@ -20,7 +21,7 @@
 .nav-logo {
   display: flex;
   justify-content: center;
-  padding-top: 0.5rem;
+  padding: 0.5rem 0;
   @include tablet {
     width: 35%;
     justify-content: flex-start;
@@ -32,4 +33,14 @@
   &__image {
     width: 75px;
   }
+}
+
+.nav-routes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.active {
+  color: $secondary-color-blue;
 }
