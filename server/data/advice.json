@@ -1,69 +1,66 @@
 [
   {
-    "userId": "123",
-    "scores": [
+    "category": "sleep",
+    "catId": "aaa",
+    "advice": [
       {
-        "date": "06/22/22",
-        "sleep": "2",
-        "fatigue": "3",
-        "stress": "2",
-        "soreness": "4",
-        "motivation": "3",
-        "total": "14"
-      },
+        "tip1": "Try taking a warm bath or shower before bed. This might encourage beneficial temperature changes in your body.",
+        "tip2": "Avoid eating too late in the day. This will ensure that your body has plenty of time to digest your last meal.",
+        "tip3": "Exercising is crucial to hormone regulation, increasing levels of serotonin and decreasing cortisol.",
+        "tip4": "It is highly recommended that you stop using electronic devices, at least thirty minutes before bed.",
+        "tip5": "Aromatherapy can improve sleep quality. The use of an oil diffuser, with scents such as lavender and peppermint, have proved successful."
+      }
+    ]
+  },
+  {
+    "category": "fatigue",
+    "catId": "bbb",
+    "advice": [
       {
-        "date": "06/23/22",
-        "sleep": "3",
-        "fatigue": "3",
-        "stress": "3",
-        "soreness": "5",
-        "motivation": "3",
-        "total": "17"
-      },
+        "tip1": "Consider reducing your caffeine intake to minimize the dependancy cycle. Use decaf coffee, if you would still like to enjoy the taste.",
+        "tip2": "Mild dehydration can often lead to fatigue, so make sure to drink plenty of water throughout the day.",
+        "tip3": "Try to set aside som personal time throughout the week, just to relax. A hectic work or social life is not always sustainable.",
+        "tip4": "Eat smaller meals, more frequently, to maintain a steady blood sugar level. Helping you avoid feeling sluggish after those large meals.",
+        "tip5": "Physical activity will not only promote better sleep but can also stress levels. Two major factors in combatting fatigue."
+      }
+    ]
+  },
+  {
+    "category": "stress",
+    "catId": "ccc",
+    "advice": [
       {
-        "date": "06/24/22",
-        "sleep": "4",
-        "fatigue": "3",
-        "stress": "1",
-        "soreness": "4",
-        "motivation": "2",
-        "total": "14"
-      },
+        "tip1": "Practice mindfulness or meditation, even for very short periods. This can help to boost your mood and reduce feelings of anxiety.",
+        "tip2": "Use deep breathing when you are feeling stressed. Inhale through the nose slowly, hold for a few seconds, and exhale slowly through the mouth.",
+        "tip3": "Spend some time in nature if possible. Parks, forests, and gardens, can all improve mental well-being.",
+        "tip4": "Cuddling has been shown to be highly effective in reducing stress. A loved one, pet, or teddy bear, can all help us release oxytocin.",
+        "tip5": "Try to start developing positive self-talk. Self-criticism and self-doubt will only fuel your stress."
+      }
+    ]
+  },
+  {
+    "category": "soreness",
+    "catId": "ddd",
+    "advice": [
       {
-        "date": "06/25/22",
-        "sleep": "5",
-        "fatigue": "2",
-        "stress": "2",
-        "soreness": "5",
-        "motivation": "2",
-        "total": "16"
-      },
+        "tip1": "Always ensure that you are warming up appropriately before exercise. Increasing muscle temperature is crucial to optimal performance.",
+        "tip2": "Daily mobility and stretching exercises are very important. Focus on the major joints; ankles, hips, and shoulders.",
+        "tip3": "Foam rolling or massages will promote myofascial release. Loosening up restricted movements and reducing pain.",
+        "tip4": "Avoid spending for extended periods of time. Try to get up and move for one or two minutes, every half hour.",
+        "tip5": "Have a soak in the bath, using epsom salts. Magnesium is absorbed through the skin, relaxing the muscles."
+      }
+    ]
+  },
+  {
+    "category": "motivation",
+    "catId": "eee",
+    "advice": [
       {
-        "date": "06/26/22",
-        "sleep": "3",
-        "fatigue": "1",
-        "stress": "5",
-        "soreness": "3",
-        "motivation": "2",
-        "total": "14"
-      },
-      {
-        "date": "06/27/22",
-        "sleep": "2",
-        "fatigue": "4",
-        "stress": "1",
-        "soreness": "5",
-        "motivation": "2",
-        "total": "14"
-      },
-      {
-        "date": "06/28/22",
-        "sleep": "4",
-        "fatigue": "3",
-        "stress": "3",
-        "soreness": "4",
-        "motivation": "2",
-        "total": "16"
+        "tip1": "Set yourself some goals that are specific, measurable, and achievable. This will provide you with a 'why' to focus on.",
+        "tip2": "Do something. It doesn't matter how small or menial the task is, like doing the dishes. You need to get the ball rolling.",
+        "tip3": "Find somebody to hold you accountable. Having somebody to pick you up on those down days can be a huge help.",
+        "tip4": "Build yourself a music playlist. Listen to it when you're showering, commuting, or working out.",
+        "tip5": "Practice grattitude by journalling or saying outloud, some things that you are grateful for each morning."
       }
     ]
   }
