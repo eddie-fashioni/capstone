@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.form {
+  margin: 2rem;
+  
+  &-container {
+  display: flex;
+  flex-direction: column;
+  }
+
+  &-category {
+    color: $primary-color-blue;
+    font-weight: 500;
+  }
+
+  &-instruction {
+    font-size: 12px;
+  }
+
+  &-buttons {
+    padding: 0.5rem 0;
+  }
+
+}

@@ -1,7 +1,6 @@
 [
   {
     "category": "sleep",
-    "catId": "aaa",
     "advice": [
       {
         "tip1": "Try taking a warm bath or shower before bed. This might encourage beneficial temperature changes in your body.",
@@ -14,7 +13,6 @@
   },
   {
     "category": "fatigue",
-    "catId": "bbb",
     "advice": [
       {
         "tip1": "Consider reducing your caffeine intake to minimize the dependancy cycle. Use decaf coffee, if you would still like to enjoy the taste.",
@@ -27,7 +25,6 @@
   },
   {
     "category": "stress",
-    "catId": "ccc",
     "advice": [
       {
         "tip1": "Practice mindfulness or meditation, even for very short periods. This can help to boost your mood and reduce feelings of anxiety.",
@@ -40,7 +37,6 @@
   },
   {
     "category": "soreness",
-    "catId": "ddd",
     "advice": [
       {
         "tip1": "Always ensure that you are warming up appropriately before exercise. Increasing muscle temperature is crucial to optimal performance.",
@@ -53,7 +49,6 @@
   },
   {
     "category": "motivation",
-    "catId": "eee",
     "advice": [
       {
         "tip1": "Set yourself some goals that are specific, measurable, and achievable. This will provide you with a 'why' to focus on.",
