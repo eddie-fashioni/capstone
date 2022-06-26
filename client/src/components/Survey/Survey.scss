@@ -4,22 +4,31 @@
 .form {
   margin: 2rem;
   
-  &-container {
+  &-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   }
 
   &-category {
     color: $primary-color-blue;
     font-weight: 500;
+    padding-bottom: 0.5rem;
   }
 
   &-instruction {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   &-buttons {
-    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0 5rem 0;
   }
 
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
 }
