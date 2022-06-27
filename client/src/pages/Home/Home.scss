@@ -1,5 +1,14 @@
 .welcome { 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem 0;
+
+  &-header {
+    margin-bottom: 0;
+  }
+
+  &-message {
+    font-size: 14px;
+  }
 }
