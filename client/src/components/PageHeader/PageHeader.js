@@ -20,7 +20,7 @@ const PageHeader = () => {
             Home
           </NavLink>
           <NavLink
-            to="/feedback"
+            to="/score"
             className="nav-routes__score"
             activeClassName="active"
           >

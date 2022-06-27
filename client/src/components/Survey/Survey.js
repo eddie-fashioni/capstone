@@ -1,5 +1,10 @@
 import "./Survey.scss";
 import { Component } from "react";
+import emoji1 from "../../assets/images/emoji-1.svg";
+import emoji2 from "../../assets/images/emoji-2.svg";
+import emoji3 from "../../assets/images/emoji-3.svg";
+import emoji4 from "../../assets/images/emoji-4.svg";
+import emoji5 from "../../assets/images/emoji-5.svg";
 
 class Survey extends Component {
   state = {};
@@ -53,14 +58,34 @@ class Survey extends Component {
               checked={this.state.selectedOption === "5"}
               onChange={this.changedOption}
             />
-            <div className="form-rating">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
           </label>
+          <div className="form-rating">
+            <img
+              className="form-rating__emoji"
+              src={emoji1}
+              alt="frowning face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji2}
+              alt="worried face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji3}
+              alt="neutral face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji4}
+              alt="slightly smiling face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji5}
+              alt="grinning face with big eyes emoji"
+            />
+          </div>
         </div>
         <div className="form-container">
           <div className="form-section">
@@ -100,14 +125,34 @@ class Survey extends Component {
               checked={this.state.selectedOption === "5"}
               onChange={this.changedOption}
             />
-            <div className="form-rating">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
           </label>
+          <div className="form-rating">
+            <img
+              className="form-rating__emoji"
+              src={emoji1}
+              alt="frowning face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji2}
+              alt="worried face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji3}
+              alt="neutral face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji4}
+              alt="slightly smiling face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji5}
+              alt="grinning face with big eyes emoji"
+            />
+          </div>
         </div>
         <div className="form-container">
           <div className="form-section">
@@ -147,14 +192,34 @@ class Survey extends Component {
               checked={this.state.selectedOption === "5"}
               onChange={this.changedOption}
             />
-            <div className="form-rating">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
           </label>
+          <div className="form-rating">
+            <img
+              className="form-rating__emoji"
+              src={emoji1}
+              alt="frowning face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji2}
+              alt="worried face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji3}
+              alt="neutral face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji4}
+              alt="slightly smiling face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji5}
+              alt="grinning face with big eyes emoji"
+            />
+          </div>
         </div>
         <div className="form-container">
           <div className="form-section">
@@ -194,14 +259,34 @@ class Survey extends Component {
               checked={this.state.selectedOption === "5"}
               onChange={this.changedOption}
             />
-            <div className="form-rating">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
           </label>
+          <div className="form-rating">
+            <img
+              className="form-rating__emoji"
+              src={emoji1}
+              alt="frowning face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji2}
+              alt="worried face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji3}
+              alt="neutral face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji4}
+              alt="slightly smiling face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji5}
+              alt="grinning face with big eyes emoji"
+            />
+          </div>
         </div>
         <div className="form-container">
           <div className="form-section">
@@ -241,14 +326,34 @@ class Survey extends Component {
               checked={this.state.selectedOption === "5"}
               onChange={this.changedOption}
             />
-            <div className="form-rating">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
           </label>
+          <div className="form-rating">
+            <img
+              className="form-rating__emoji"
+              src={emoji1}
+              alt="frowning face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji2}
+              alt="worried face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji3}
+              alt="neutral face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji4}
+              alt="slightly smiling face emoji"
+            />
+            <img
+              className="form-rating__emoji"
+              src={emoji5}
+              alt="grinning face with big eyes emoji"
+            />
+          </div>
         </div>
       </form>
     );

@@ -2,7 +2,13 @@
 @use "../../styles/partials/mixins" as *;
 
 .form {
-  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &-container {
+    border-top: 2px solid $secondary-color-white;
+    padding: 2rem 0;
+  }
   
   &-section {
   display: flex;
@@ -23,7 +29,17 @@
   &-buttons {
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem 0 5rem 0;
+    padding: 2rem 0 1rem 0;
+  }
+
+  &-rating {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0.85rem;
+
+    &__emoji {
+      width: 50px;
+    }
   }
 
 }

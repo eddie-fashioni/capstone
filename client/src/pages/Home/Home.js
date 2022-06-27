@@ -12,7 +12,12 @@ componentDidMount() {
 
 render() {
   return (
+    <>
+    <div className="welcome">
+    <h2 className="welcome-message">Good Morning Eddie!</h2>
+    </div>
     <Survey />
+    </>
   )
 }
 
