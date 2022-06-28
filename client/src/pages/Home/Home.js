@@ -1,4 +1,5 @@
 import { Component } from "react";
+import DailyTotal from "../../components/DailyTotal/DailyTotal";
 import Survey from "../../components/Survey/Survey";
 import "./Home.scss";
 
@@ -18,6 +19,7 @@ render() {
     <p className="welcome-message">Take 5 minutes to check in on yourself...</p>
     </div>
     <Survey/>
+    <DailyTotal/>
     </>
   )
 }
