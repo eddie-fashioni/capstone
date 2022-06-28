@@ -1,5 +1,5 @@
 import "./Survey.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import emoji1 from "../../assets/images/emoji-1.svg";
 import emoji2 from "../../assets/images/emoji-2.svg";
@@ -15,13 +15,13 @@ function Survey() {
   const [stress, setStress] = useState(0);
   const [soreness, setSoreness] = useState(0);
   const [motivation, setMotivation] = useState(0);
-  // const setTotalScore
 
   const submitHandler = (event) => {
     event.preventDefault();
     console.log("Submit Working");
     axios
-      .post("http://localhost:5000/scores", {
+      .post("/scores", {
+        timestamp: new Date(),
         sleep: sleep,
         fatigue: fatigue,
         stress: stress,
