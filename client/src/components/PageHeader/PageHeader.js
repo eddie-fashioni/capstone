@@ -16,15 +16,11 @@ const PageHeader = () => {
           </Link>
         </div>
         <div className="nav-routes">
-          <NavLink to="/" className="nav-routes__home" activeClassName="active">
+          <NavLink 
+            to="/" 
+            className="nav-routes__home" 
+            activeClassName="active">
             Home
-          </NavLink>
-          <NavLink
-            to="/feedback"
-            className="nav-routes__score"
-            activeClassName="active"
-          >
-            Score
           </NavLink>
           <NavLink
             to="/dashboard"
