@@ -2,6 +2,7 @@ import { Component } from "react";
 import DailyTotal from "../../components/DailyTotal/DailyTotal";
 import Survey from "../../components/Survey/Survey";
 import "./Home.scss";
+import start from "../../assets/images/startbutton.svg";
 
 class Home extends Component {
   //   state = {
@@ -21,6 +22,7 @@ class Home extends Component {
           </p>
         </div>
         <div className="welcome-start">
+        <img className="welcome-start__image" src={start} alt="Finger pushing button"/>
           <button className="welcome-start__button">
             Start The<br></br>Survey!
           </button>

@@ -8,8 +8,8 @@ const readFromJSON = () => {
   return JSON.parse(fs.readFileSync('./data/scores.json'));
 }
 
-const writeToJSON = () => {
-  JSON.stringify(fs.writeFileSync('./data/scores.json', writeToJSON));
+const writeToJSON = (scores) => {
+  fs.writeFileSync('./data/scores.json', JSON.stringify(scores));
 }
 
 router.post("/", (req, res) => {
@@ -34,9 +34,7 @@ router.post("/", (req, res) => {
   let scores = readFromJSON();
   console.log(scores[0].userId);
   scores.push(newScores);
-  scores.forEach((score) => {
-    console.log(score);
-  })
+  writeToJSON(scores);
   res.send("send");
 });
 
