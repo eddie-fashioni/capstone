@@ -20,7 +20,7 @@ function Survey() {
     event.preventDefault();
     console.log("Submit Working");
     axios
-      .post("/scores", {
+      .post("http://localhost:5000/scores", {
         timestamp: new Date(),
         sleep: sleep,
         fatigue: fatigue,

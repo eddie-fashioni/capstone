@@ -4,26 +4,32 @@ import Survey from "../../components/Survey/Survey";
 import "./Home.scss";
 
 class Home extends Component {
-//   state = {
-//   };
+  //   state = {
+  //   };
 
-// componentDidMount() {
+  // componentDidMount() {
 
-// }
+  // }
 
-render() {
-  return (
-    <>
-    <div className="welcome">
-    <h2 className="welcome-header">Good Morning Eddie!</h2>
-    <p className="welcome-message">Take 5 minutes to check in on yourself...</p>
-    </div>
-    <Survey/>
-    <DailyTotal/>
-    </>
-  )
+  render() {
+    return (
+      <>
+        <div className="welcome">
+          <h2 className="welcome-header">Good Morning Eddie!</h2>
+          <p className="welcome-message">
+            Take 5 minutes to check in on yourself...
+          </p>
+        </div>
+        <div className="welcome-start">
+          <button className="welcome-start__button">
+            Start The<br></br>Survey!
+          </button>
+      </div>
+        <Survey />
+        <DailyTotal />
+      </>
+    );
+  }
 }
 
-}
-
-export default Home
+export default Home;

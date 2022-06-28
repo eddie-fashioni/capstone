@@ -1,4 +1,5 @@
 import "./DailyTotal.scss";
+import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
 
 const DailyTotal = () => {
@@ -21,9 +22,11 @@ const DailyTotal = () => {
         <p className="flag-tip">Random piece of advice on given category</p>
       </div>
       <div className="feedback-confirm">
-        <button className="feedback-confirm__button">
-          See My<br></br>Summary!
-        </button>
+        <Link to="/dashboard">
+          <button className="feedback-confirm__button">
+            See My<br></br>Summary!
+          </button>
+        </Link>
       </div>
     </section>
   );
