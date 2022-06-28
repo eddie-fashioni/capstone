@@ -21,6 +21,15 @@ app.get('/', (req, res) => {
 })
 
 app.post('/scores', (req, res) => {
+  let {
+    timestamp,
+    sleep,
+    fatigue,
+    stress,
+    soreness,
+    motivation,
+    total
+  } = req.body;
   console.log(req.body);
   res.send("send")
 })
