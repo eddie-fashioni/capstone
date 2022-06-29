@@ -1,18 +1,29 @@
 import "./Home.scss";
 import { useState } from "react";
+import axios from "axios";
 import Survey from "../../components/Survey/Survey";
 import start from "../../assets/images/startbutton.svg";
 import DailyTotal from "../../components/DailyTotal/DailyTotal";
 
 function Home() {
-  const [started, setStarted] = useState(false);
-  const [getstarted, setGetStarted] = useState(true);
-  const [issurveyopen, setIsSurveyOpen] = useState(false);
+  const [getStarted, setGetStarted] = useState(true);
+  const [isSurveyOpen, setIsSurveyOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+
+  // const getScores = () => {
+  //   axios.get("http://localhost:5000/scores").then((response) => {
+  //   });
+  // };
+
+  // Axios get req for all json data and pass as props down to Daily ScreenOrientation,
+  // where I will filter / find the last obj in the array and use total score key
+
+  // Axios get req for all advice json data to dsiaply cat random advice using if statement
+  // based on socre of < 3
 
   return (
     <>
-      {getstarted && (
+      {getStarted && (
         <>
           <div className="welcome">
             <h2 className="welcome-header">Good Morning Eddie!</h2>
@@ -38,7 +49,7 @@ function Home() {
         </>
       )}
 
-      {issurveyopen && (
+      {isSurveyOpen && (
         <Survey
           setGetStarted={setGetStarted}
           setIsSurveyOpen={setIsSurveyOpen}
@@ -46,8 +57,7 @@ function Home() {
         />
       )}
 
-{formSubmitted && <DailyTotal />}
-
+      {formSubmitted && <DailyTotal />}
     </>
   );
 }

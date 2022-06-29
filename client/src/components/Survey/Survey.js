@@ -8,7 +8,7 @@ import emoji4 from "../../assets/images/emoji-4.svg";
 import emoji5 from "../../assets/images/emoji-5.svg";
 import DailyTotal from "../DailyTotal/DailyTotal";
 
-function Survey({setGetStarted,setIsSurveyOpen,setFormSubmitted}) {
+function Survey({ setGetStarted, setIsSurveyOpen, setFormSubmitted }) {
   const [sleep, setSleep] = useState(0);
   const [fatigue, setFatigue] = useState(0);
   const [stress, setStress] = useState(0);
@@ -16,13 +16,12 @@ function Survey({setGetStarted,setIsSurveyOpen,setFormSubmitted}) {
   const [motivation, setMotivation] = useState(0);
   const [submitted, setSubmitted] = useState(false);
 
-
   const submitHandler = (event) => {
     event.preventDefault();
     console.log("Submit Working");
     axios
       .post("http://localhost:5000/scores", {
-        timestamp: new Date(),
+        timestamp: new Date().toLocaleDateString(),
         sleep: sleep,
         fatigue: fatigue,
         stress: stress,
@@ -31,10 +30,10 @@ function Survey({setGetStarted,setIsSurveyOpen,setFormSubmitted}) {
         total: sleep + fatigue + stress + soreness + motivation,
       })
       .then(function (response) {
-        setSubmitted(true)
+        setSubmitted(true);
         setGetStarted(false);
         setIsSurveyOpen(false);
-        setFormSubmitted(true)
+        setFormSubmitted(true);
       })
       .catch(function (error) {
         console.log(error);

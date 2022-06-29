@@ -12,6 +12,9 @@ app.use(express.json());
 app.use(cors());
 
 // VIDEO.JS ROUTE
+// app.get('/', (req,res) => {
+//   res.send("hello");
+// })
 app.use('/scores', scores);
 
 // SERVER LISTENING ON PORT
