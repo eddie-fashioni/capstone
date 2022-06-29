@@ -8,13 +8,14 @@ import emoji4 from "../../assets/images/emoji-4.svg";
 import emoji5 from "../../assets/images/emoji-5.svg";
 import DailyTotal from "../DailyTotal/DailyTotal";
 
-function Survey() {
+function Survey({setGetStarted,setIsSurveyOpen,setFormSubmitted}) {
   const [sleep, setSleep] = useState(0);
   const [fatigue, setFatigue] = useState(0);
   const [stress, setStress] = useState(0);
   const [soreness, setSoreness] = useState(0);
   const [motivation, setMotivation] = useState(0);
-  const [submitted, setsubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -30,7 +31,10 @@ function Survey() {
         total: sleep + fatigue + stress + soreness + motivation,
       })
       .then(function (response) {
-        console.log(response);
+        setSubmitted(true)
+        setGetStarted(false);
+        setIsSurveyOpen(false);
+        setFormSubmitted(true)
       })
       .catch(function (error) {
         console.log(error);
@@ -403,7 +407,7 @@ function Survey() {
         <div className="form-submit">
           <button
             onClick={() => {
-              setsubmitted(true);
+              setSubmitted(true);
             }}
             className="form-submit__button"
           >
@@ -411,7 +415,6 @@ function Survey() {
           </button>
         </div>
       </form>
-      {submitted && <DailyTotal />}
     </>
   );
 }
