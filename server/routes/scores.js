@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-// const filePath = './data/scores.json'
-const { v4: uuidv4 } = require("uuid");
+// const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
 
 const readFromJSON = () => {
@@ -16,7 +15,7 @@ router.post("/", (req, res) => {
   let { timestamp, sleep, fatigue, stress, soreness, motivation, total } =
     req.body;
   let newScores = {
-    userId: uuidv4(),
+    userId: 123,
     scores: [
       {
         timestamp,

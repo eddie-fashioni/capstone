@@ -9,6 +9,7 @@ const DailyTotal = () => {
         <h2 className="total-header">Hey Eddie!</h2>
         <p className="total-message">Here is your feedback for today...</p>
       </div>
+      <div className="desktop-container">
       <div className="score">
         <h1 className="score-header">Total Score</h1>
         <h1 className="score-total">21</h1>
@@ -20,6 +21,7 @@ const DailyTotal = () => {
           <span className="flag-category">Category here</span>
         </div>
         <p className="flag-tip">Random piece of advice on given category</p>
+      </div>
       </div>
       <div className="feedback-confirm">
         <Link to="/dashboard">

@@ -5,12 +5,15 @@ import "./Home.scss";
 import start from "../../assets/images/startbutton.svg";
 
 class Home extends Component {
-  //   state = {
-  //   };
+  state={
+    surveyOpen: false,
+  }
 
-  // componentDidMount() {
-
-  // }
+  handleStart = () => {
+    this.setState({
+      surveyOpen: true,
+    })
+  }
 
   render() {
     return (
@@ -23,12 +26,11 @@ class Home extends Component {
         </div>
         <div className="welcome-start">
         <img className="welcome-start__image" src={start} alt="Finger pushing button"/>
-          <button className="welcome-start__button">
+          <button className="welcome-start__button" onClick={this.handleStart}>
             Start The<br></br>Survey!
           </button>
       </div>
-        <Survey />
-        <DailyTotal />
+        {this.state.surveyOpen && <Survey />}
       </>
     );
   }
