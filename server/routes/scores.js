@@ -13,31 +13,33 @@ const writeToJSON = (scores) => {
 router.get("/", (req, res) => {
   const scoreDetails = JSON.parse(fs.readFileSync("./data/scores.json"));
   res.status(200).json(scoreDetails);
-  console.log(scoreDetails);
 });
 
 router.post("/", (req, res) => {
+  // console.log(req.body);
   let { timestamp, sleep, fatigue, stress, soreness, motivation, total } =
     req.body;
-  let newScores = {
-    userId: 123,
-    scores: [
-      {
-        timestamp,
-        sleep,
-        fatigue,
-        stress,
-        soreness,
-        motivation,
-        total,
-      },
-    ],
-  };
+  let existingScores = readFromJSON();
+  foundUser = existingScores.find((score) => {
+    return score.userId === 1234;
+  });
+  foundUser.scores.push({
+    timestamp,
+    sleep,
+    fatigue,
+    stress,
+    soreness,
+    motivation,
+    total,
+  });
+  foundIndex = existingScores.indexOf(foundUser);
+  console.log(`the scores array has a total of ${existingScores.length}`);
+  console.log(`this is the indexof foundUser ${foundIndex}`);
+  existingScores[foundIndex] = foundUser;
+  console.log(existingScores);
 
-  let scores = readFromJSON();
-  scores.push(newScores);
-  writeToJSON(scores);
-  res.send("send");
+  writeToJSON(existingScores);
+  res.status(200).json(foundUser);
 });
 
 module.exports = router;

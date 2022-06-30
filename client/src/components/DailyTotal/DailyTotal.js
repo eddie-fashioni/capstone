@@ -2,7 +2,8 @@ import "./DailyTotal.scss";
 import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
 
-const DailyTotal = () => {
+const DailyTotal = ({scores, advice}) => {
+  
   return (
     <section className="daily-total">
       <div className="total">
@@ -12,7 +13,7 @@ const DailyTotal = () => {
       <div className="desktop-container">
       <div className="score">
         <h1 className="score-header">Total Score</h1>
-        <h1 className="score-total">21</h1>
+        <h1 className="score-total">{scores[0].total}</h1>
         <p className="score-info">Score based statement here</p>
       </div>
       <div className="flag">
