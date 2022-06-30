@@ -11,18 +11,28 @@ function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [scores, setScores] = useState(null);
   const [advice, setAdvice] = useState(null);
+  const [total, setTotal] = useState(0);
+
+  const updatedFeedback = (totalFromSurvey, adviceFromScores) => {
+    setTotal(totalFromSurvey);
+    setAdvice(adviceFromScores);
+  };
 
   useEffect(() => {
     axios.get("http://localhost:5000/scores").then((response) => {
       setScores(response.data);
     });
-  }, []);
-
-  useEffect(() => {
     axios.get("http://localhost:5000/advice").then((response) => {
       setAdvice(response.data);
+      console.log(advice);
     });
   }, []);
+
+  // useEffect(() => {
+  //   axios.get("http://localhost:5000/advice").then((response) => {
+  //     setAdvice(response.data);
+  //   });
+  // }, []);
 
   return (
     <>
@@ -57,10 +67,17 @@ function Home() {
           setGetStarted={setGetStarted}
           setIsSurveyOpen={setIsSurveyOpen}
           setFormSubmitted={setFormSubmitted}
+          updatedFeedback={updatedFeedback}
         />
       )}
 
-      {formSubmitted && <DailyTotal scores={scores} advice={advice} />}
+      {formSubmitted && (
+        <DailyTotal
+          scores={scores}
+          advice={advice}
+          total={total}
+        />
+      )}
     </>
   );
 }
