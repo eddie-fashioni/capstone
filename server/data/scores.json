@@ -1,1 +1,79 @@
-[{"userId":"123","scores":[{"timestamp":"06/22/22","sleep":"2","fatigue":"3","stress":"2","soreness":"4","motivation":"3","total":"14"},{"timestamp":"06/23/22","sleep":"3","fatigue":"3","stress":"3","soreness":"5","motivation":"3","total":"17"},{"timestamp":"06/24/22","sleep":"4","fatigue":"3","stress":"1","soreness":"4","motivation":"2","total":"14"},{"timestamp":"06/25/22","sleep":"5","fatigue":"2","stress":"2","soreness":"5","motivation":"2","total":"16"},{"timestamp":"06/26/22","sleep":"3","fatigue":"1","stress":"5","soreness":"3","motivation":"2","total":"14"},{"timestamp":"06/27/22","sleep":"2","fatigue":"4","stress":"1","soreness":"5","motivation":"2","total":"14"},{"timestamp":"06/28/22","sleep":"4","fatigue":"3","stress":"3","soreness":"4","motivation":"2","total":"16"}]},{"userId":1234,"scores":[{"timestamp":"6/29/2022","sleep":1,"fatigue":2,"stress":3,"soreness":4,"motivation":5,"total":15},{"timestamp":"6/29/2022, 10:14:13 PM","sleep":5,"fatigue":5,"stress":5,"soreness":5,"motivation":5,"total":25},{"timestamp":"6/29/2022, 10:14:37 PM","sleep":2,"fatigue":1,"stress":2,"soreness":1,"motivation":2,"total":8},{"timestamp":"6/29/2022, 10:14:13 PM","sleep":1,"fatigue":2,"stress":3,"soreness":4,"motivation":5,"total":10}]},{"userId":12345,"scores":[{"timestamp":"6/29/2022, 4:24:18 PM","sleep":5,"fatigue":4,"stress":3,"soreness":2,"motivation":1,"total":15}]},{"userId":123456,"scores":[{"timestamp":"6/29/2022, 5:00:09 PM","sleep":3,"fatigue":3,"stress":3,"soreness":3,"motivation":3,"total":15}]}]
+[
+  {
+    "userId": 1234,
+    "scores": [
+      {
+        "timestamp": "6/29/2022",
+        "sleep": 1,
+        "fatigue": 2,
+        "stress": 3,
+        "soreness": 4,
+        "motivation": 5,
+        "total": 15
+      },
+      {
+        "timestamp": "6/29/2022, 10:14:13 PM",
+        "sleep": 5,
+        "fatigue": 5,
+        "stress": 5,
+        "soreness": 5,
+        "motivation": 5,
+        "total": 25
+      },
+      {
+        "timestamp": "6/29/2022, 10:14:37 PM",
+        "sleep": 2,
+        "fatigue": 1,
+        "stress": 2,
+        "soreness": 1,
+        "motivation": 2,
+        "total": 8
+      },
+      {
+        "timestamp": "6/29/2022, 10:14:13 PM",
+        "sleep": 1,
+        "fatigue": 2,
+        "stress": 3,
+        "soreness": 4,
+        "motivation": 5,
+        "total": 10
+      },
+      {
+        "timestamp": "6/29/2022, 10:27:58 PM",
+        "sleep": 0,
+        "fatigue": 0,
+        "stress": 0,
+        "soreness": 0,
+        "motivation": 0,
+        "total": 0
+      },
+      {
+        "timestamp": "6/29/2022, 10:31:54 PM",
+        "sleep": 0,
+        "fatigue": 0,
+        "stress": 0,
+        "soreness": 0,
+        "motivation": 0,
+        "total": 0
+      },
+      {
+        "timestamp": "6/29/2022, 10:42:49 PM",
+        "sleep": 0,
+        "fatigue": 0,
+        "stress": 0,
+        "soreness": 0,
+        "motivation": 0,
+        "total": 0
+      },
+      {
+        "timestamp": "6/30/2022, 9:49:09 AM",
+        "sleep": 0,
+        "fatigue": 0,
+        "stress": 0,
+        "soreness": 0,
+        "motivation": 0,
+        "total": 0
+      }
+    ]
+  }
+]

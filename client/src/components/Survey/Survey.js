@@ -6,8 +6,6 @@ import emoji2 from "../../assets/images/emoji-2.svg";
 import emoji3 from "../../assets/images/emoji-3.svg";
 import emoji4 from "../../assets/images/emoji-4.svg";
 import emoji5 from "../../assets/images/emoji-5.svg";
-import DailyTotal from "../DailyTotal/DailyTotal";
-// const { v4: uuidv4 } = require("uuid");
 
 function Survey({ setGetStarted, setIsSurveyOpen, setFormSubmitted }) {
   const [sleep, setSleep] = useState(0);
@@ -15,7 +13,8 @@ function Survey({ setGetStarted, setIsSurveyOpen, setFormSubmitted }) {
   const [stress, setStress] = useState(0);
   const [soreness, setSoreness] = useState(0);
   const [motivation, setMotivation] = useState(0);
-  const [submitted, setSubmitted] = useState(false);
+  // const [total, setTotal] = useState(0);
+  const [_submitted, setSubmitted] = useState(false);
 
   const submitHandler = (event) => {
     event.preventDefault();

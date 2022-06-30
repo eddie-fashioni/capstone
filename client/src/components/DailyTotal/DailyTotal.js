@@ -2,8 +2,7 @@ import "./DailyTotal.scss";
 import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
 
-const DailyTotal = ({scores, advice}) => {
-  
+const DailyTotal = ({ scores, advice }) => {
   return (
     <section className="daily-total">
       <div className="total">
@@ -11,18 +10,18 @@ const DailyTotal = ({scores, advice}) => {
         <p className="total-message">Here is your feedback for today...</p>
       </div>
       <div className="desktop-container">
-      <div className="score">
-        <h1 className="score-header">Total Score</h1>
-        <h1 className="score-total">{scores[0].total}</h1>
-        <p className="score-info">Score based statement here</p>
-      </div>
-      <div className="flag">
-        <div className="flag-container">
-          <img className="flag-image" src={flag} alt="Red flag" />
-          <span className="flag-category">Category here</span>
+        <div className="score">
+          <h1 className="score-header">Total Score</h1>
+          <h1 className="score-total">{scores[0].total}</h1>
+          <p className="score-info">Score based statement here</p>
         </div>
-        <p className="flag-tip">Random piece of advice on given category</p>
-      </div>
+        <div className="flag">
+          <div className="flag-container">
+            <img className="flag-image" src={flag} alt="Red flag" />
+            <span className="flag-category">Category here</span>
+          </div>
+          <p className="flag-tip">Random piece of advice on given category</p>
+        </div>
       </div>
       <div className="feedback-confirm">
         <Link to="/dashboard">

@@ -2,8 +2,8 @@ import "./Home.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Survey from "../../components/Survey/Survey";
-import start from "../../assets/images/startbutton.svg";
 import DailyTotal from "../../components/DailyTotal/DailyTotal";
+import start from "../../assets/images/startbutton.svg";
 
 function Home() {
   const [getStarted, setGetStarted] = useState(true);
@@ -60,12 +60,7 @@ function Home() {
         />
       )}
 
-      {formSubmitted && (
-      <DailyTotal 
-        scores={scores} 
-        advice={advice}
-      />
-      )}
+      {formSubmitted && <DailyTotal scores={scores} advice={advice} />}
     </>
   );
 }
