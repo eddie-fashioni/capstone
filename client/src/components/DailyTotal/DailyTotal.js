@@ -3,6 +3,19 @@ import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
 
 const DailyTotal = ({ scores, advice, total }) => {
+  
+  
+  //function that takes an array as an input and return one random element from array as output
+  function getRandomItem(arr) {
+    // get random index value
+    const randomIndex = Math.floor(Math.random() * arr.length);
+
+    // get random item
+    const item = arr[randomIndex];
+
+    return item;
+  }
+
   return (
     <section className="daily-total">
       <div className="total">
@@ -16,11 +29,17 @@ const DailyTotal = ({ scores, advice, total }) => {
           <p className="score-info">Score based statement here</p>
         </div>
         <div className="flag">
-          <div className="flag-container">
-            <img className="flag-image" src={flag} alt="Red flag" />
-            <span className="flag-category">Category here</span>
-          </div>
-          <p className="flag-tip">{advice}</p>
+          {advice.map((advice) => {
+            return (
+              <>
+                <div className="flag-container">
+                  <img className="flag-image" src={flag} alt="Red flag" />
+                  <span className="flag-category">{advice.category}</span>
+                </div>
+                <p className="flag-tip">{getRandomItem(advice.advice)}</p>
+              </>
+            );
+          })}
         </div>
       </div>
       <div className="feedback-confirm">
