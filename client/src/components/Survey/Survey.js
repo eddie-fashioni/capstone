@@ -7,7 +7,12 @@ import emoji3 from "../../assets/images/emoji-3.svg";
 import emoji4 from "../../assets/images/emoji-4.svg";
 import emoji5 from "../../assets/images/emoji-5.svg";
 
-function Survey({ setGetStarted, setIsSurveyOpen, setFormSubmitted, updatedFeedback }) {
+function Survey({
+  setGetStarted,
+  setIsSurveyOpen,
+  setFormSubmitted,
+  updatedFeedback,
+}) {
   const [sleep, setSleep] = useState(0);
   const [fatigue, setFatigue] = useState(0);
   const [stress, setStress] = useState(0);
@@ -29,11 +34,15 @@ function Survey({ setGetStarted, setIsSurveyOpen, setFormSubmitted, updatedFeedb
         motivation: motivation,
         total: sleep + fatigue + stress + soreness + motivation,
       })
-      .then(function (response)
-       {
+      .then(function (response) {
         let total = sleep + fatigue + stress + soreness + motivation;
-        let advice = response.data.scores[21].advice[0].advice[0];
+        let scores = response.data.scores;
+        console.log(scores.length);
+        console.log(scores);
+        let advice = scores[scores.length - 1].feedback;
         console.log(advice);
+
+        
         setSubmitted(true);
         setGetStarted(false);
         setIsSurveyOpen(false);

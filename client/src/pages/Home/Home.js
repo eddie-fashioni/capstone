@@ -21,18 +21,14 @@ function Home() {
   useEffect(() => {
     axios.get("http://localhost:5000/scores").then((response) => {
       setScores(response.data);
+      console.log(response.data);
+      console.log("use effect called");
     });
-    axios.get("http://localhost:5000/advice").then((response) => {
-      setAdvice(response.data);
-      console.log(advice);
-    });
-  }, []);
+    // axios.get("http://localhost:5000/advice").then((response) => {
+    //   setAdvice(response.data);
+    // });
+  }, [formSubmitted]);
 
-  // useEffect(() => {
-  //   axios.get("http://localhost:5000/advice").then((response) => {
-  //     setAdvice(response.data);
-  //   });
-  // }, []);
 
   return (
     <>
@@ -72,11 +68,7 @@ function Home() {
       )}
 
       {formSubmitted && (
-        <DailyTotal
-          scores={scores}
-          advice={advice}
-          total={total}
-        />
+        <DailyTotal scores={scores} advice={advice} total={total} />
       )}
     </>
   );

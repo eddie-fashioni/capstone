@@ -43,12 +43,13 @@ let findCategory = (adviceObj) => {
   let keys = Object.keys(adviceObj);
   let filtered = keys.filter((key) => {
     return adviceObj[key];
-  })
-  let foundAdvice = categoryAdvice.filter((category) => {
+  });
+  let foundAdviceCategory = categoryAdvice.filter((category) => {
     return filtered.includes(category.category);
-  })
-  return foundAdvice;
-}
+  });
+
+  return foundAdviceCategory;
+};
 
 const writeToJSON = (scores) => {
   fs.writeFileSync("./data/scores.json", JSON.stringify(scores));
@@ -60,9 +61,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  console.log(findFlags(req.body));
   let advice = findFlags(req.body);
-  console.log(findCategory(advice));
 
   let { timestamp, sleep, fatigue, stress, soreness, motivation, total } =
     req.body;
@@ -78,7 +77,7 @@ router.post("/", (req, res) => {
     soreness,
     motivation,
     total,
-    advice: findCategory(advice)
+    feedback: findCategory(advice),
   });
   foundIndex = existingScores.indexOf(foundUser);
   existingScores[foundIndex] = foundUser;
