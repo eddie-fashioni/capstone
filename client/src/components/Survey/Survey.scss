@@ -8,6 +8,12 @@
   &-container {
     border-top: 2px solid $secondary-color-white;
     padding: 2rem 0;
+    @include tablet {
+      padding: 2rem 5rem;
+    }
+    @include desktop {
+      padding: 2rem 10rem;
+    }
   }
   
   &-section {
@@ -20,10 +26,16 @@
     color: $primary-color-blue;
     font-weight: 500;
     padding-bottom: 0.5rem;
+    @include tablet {
+      font-size: 20px;
+    }
   }
 
   &-instruction {
     font-size: 14px;
+    @include tablet {
+      font-size: 20px;
+    }
   }
 
   &-buttons {
@@ -39,6 +51,12 @@
 
     &__emoji {
       width: 50px;
+      @include tablet {
+        width: 65px;
+      }
+      @include desktop {
+        width: 80px;
+      }
     }
   }
 
@@ -50,13 +68,17 @@
 
     &__button {
       font-size: 16px;
-      padding: 1rem 2rem;
+      padding: 1rem 1rem;
       background-color: $primary-color-blue;
       color: white;
       border-radius: 100px;
       border: none;
       box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       transition: all 0.5s;
+      @include desktop {
+        font-size: 20px;
+        padding: 1.5rem 1.5rem;
+      }
     }
     &__button{
       cursor: pointer;
@@ -66,7 +88,6 @@
     }
     
     &__button:after {
-      content: ">";
       position: absolute;
       opacity: 0;  
       top: 25px;

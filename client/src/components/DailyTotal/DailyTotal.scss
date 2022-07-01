@@ -1,0 +1,127 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.total { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+
+  &-header {
+    margin-bottom: 0;
+  }
+
+  &-message {
+    font-size: 14px;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-header {
+    margin-bottom: 0;
+  }
+
+  &-total {
+    font-size: 40px;
+    color: $primary-color-blue;
+    border: 5px solid $primary-color-blue;
+    border-radius: 50%;
+    padding: 3rem;
+  }
+
+  &-info {
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}
+
+.flag {
+  margin: 2rem;
+
+  &-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-image {
+    width: 40px;
+  }
+
+  &-category {
+    color: $primary-color-blue;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 2rem;
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+
+  &-tip {
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}
+
+.feedback-confirm {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+
+  &__button {
+    font-size: 16px;
+    padding: 1rem 1rem;
+    background-color: $primary-color-blue;
+    color: white;
+    border-radius: 100px;
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    transition: all 0.5s;
+    @include desktop {
+      font-size: 20px;
+      padding: 1.5rem 1.5rem;
+    }
+  }
+  &__button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  &__button:after {
+    position: absolute;
+    opacity: 0;  
+    top: 25px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  &__button:hover{
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+  
+  &__button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+}
+
+.desktop-container {
+  @include desktop {
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

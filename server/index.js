@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const cors = require('cors');
-// const videos = require('./routes/videos'); EXAMPLE
-const fs = require('fs');
+const cors = require("cors");
+const scores = require('./routes/scores');
+const advice = require('./routes/advice');
 
 // PORT
 require("dotenv").config();
@@ -12,20 +12,9 @@ const port = 5000;
 app.use(express.json());
 app.use(cors());
 
-app.get('/scores', (req, res) => {
-  res.send("Hello1")
-})
-
-app.get('/', (req, res) => {
-  res.send("Hello")
-})
-
-app.post('/scores', (req, res) => {
-  console.log(req.body);
-  res.send("send")
-})
 // VIDEO.JS ROUTE
-// app.use('/videos', videos); EXAMPLE
+app.use('/scores', scores);
+app.use('/advice', advice);
 
 // SERVER LISTENING ON PORT
 app.listen(port, () => {

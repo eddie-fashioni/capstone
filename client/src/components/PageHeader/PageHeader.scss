@@ -6,6 +6,9 @@
   flex-direction: column;
   background-color: black;
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   @include tablet {
     padding: 2rem 5rem;
   }
