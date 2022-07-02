@@ -24,9 +24,6 @@ function Home() {
       console.log(response.data);
       console.log("use effect called");
     });
-    // axios.get("http://localhost:5000/advice").then((response) => {
-    //   setAdvice(response.data);
-    // });
   }, [formSubmitted]);
 
 

@@ -23,7 +23,7 @@ const PageHeader = () => {
             Home
           </NavLink>
           <NavLink
-            to="/dashboard"
+            to="/dash"
             className="nav-routes__dash"
             activeClassName="active"
           >

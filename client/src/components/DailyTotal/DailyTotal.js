@@ -2,15 +2,11 @@ import "./DailyTotal.scss";
 import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
 
+
 const DailyTotal = ({ scores, advice, total }) => {
   
-  
-  //function that takes an array as an input and return one random element from array as output
   function getRandomItem(arr) {
-    // get random index value
     const randomIndex = Math.floor(Math.random() * arr.length);
-
-    // get random item
     const item = arr[randomIndex];
 
     return item;
@@ -43,7 +39,7 @@ const DailyTotal = ({ scores, advice, total }) => {
         </div>
       </div>
       <div className="feedback-confirm">
-        <Link to="/dashboard">
+        <Link to="/dash">
           <button className="feedback-confirm__button">
             See My<br></br>Summary!
           </button>
