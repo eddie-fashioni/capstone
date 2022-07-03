@@ -1,4 +1,5 @@
-import ScoreChart from "../../components/ScoreChart/ScoreChart";
+import CategoryChart from "../../components/CategoryChart/CategoryChart";
+import TotalChart from "../../components/TotalChart/TotalChart";
 import "./Dash.scss";
 
 function Dash() {
@@ -12,7 +13,8 @@ function Dash() {
           Check out your weekly roundup in the chart below. 
         </p>
         </div>
-      <ScoreChart/>
+      <CategoryChart/>
+      <TotalChart/>
       </div>
     </>
   );
