@@ -57,6 +57,9 @@ function TotalChart() {
     });
     setChartOptions({
       responsive: true,
+      layout: {
+        padding: 25,
+      },
       scales: {
         y: {
           min: 0,

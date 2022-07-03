@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
 
 
-const DailyTotal = ({ scores, advice, total }) => {
+const DailyTotal = ({ advice, total }) => {
   
   function getRandomItem(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);

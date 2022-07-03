@@ -8,9 +8,9 @@ function Dash() {
     <>
       <div className="summary">
         <div className="summary-greeting">
-        <h2 className="summary-header">Here is how your looking this week Eddie!</h2>
+        <h2 className="summary-header">Let's take a look, Eddie!</h2>
         <p className="summary-message">
-          Check out your weekly roundup in the chart below. 
+          Check out your weekly roundup in the charts below. 
         </p>
         </div>
       <CategoryChart/>

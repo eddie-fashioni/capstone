@@ -29,7 +29,7 @@ function CategoryChart() {
 
   const [chartOptions, setChartOptions] = useState({});
 
-  // Add JSON data below 
+  // Add JSON data below
   // *last 7 timestamp entries to labels array*
   // *last 7 category scores to datasets objects*
 
@@ -51,7 +51,7 @@ function CategoryChart() {
           hoverBorderWidth: 10,
           borderColor: "#00aedb",
           backgroundColor: "#00aedb",
-          data: [3, 2, 3, 4, 5, 4, 5]
+          data: [3, 2, 3, 4, 5, 4, 5],
         },
         {
           label: "Fatigue",
@@ -59,7 +59,7 @@ function CategoryChart() {
           hoverBorderWidth: 10,
           borderColor: "#8ec127",
           backgroundColor: "#8ec127",
-          data: [2, 1, 3, 3, 3, 4, 4]
+          data: [2, 1, 3, 3, 3, 4, 4],
         },
         {
           label: "Stress",
@@ -67,7 +67,7 @@ function CategoryChart() {
           hoverBorderWidth: 10,
           borderColor: "#f47835",
           backgroundColor: "#f47835",
-          data: [4, 2, 3, 5, 5, 3, 2]
+          data: [4, 2, 3, 5, 5, 3, 2],
         },
         {
           label: "Soreness",
@@ -75,7 +75,7 @@ function CategoryChart() {
           hoverBorderWidth: 10,
           borderColor: "#d41243",
           backgroundColor: "#d41243",
-          data: [1, 1, 3, 4, 3, 4, 2]
+          data: [1, 1, 3, 4, 3, 4, 2],
         },
         {
           label: "Motivation",
@@ -83,17 +83,20 @@ function CategoryChart() {
           hoverBorderWidth: 10,
           borderColor: "#a200ff",
           backgroundColor: "#a200ff",
-          data: [4, 4, 3, 2, 5, 4, 3]
+          data: [4, 4, 3, 2, 5, 4, 3],
         },
       ],
     });
     setChartOptions({
       responsive: true,
+      layout: {
+        padding: 25,
+      },
       scales: {
         y: {
           min: 0.5,
-          max: 5.5
-        }
+          max: 5.5,
+        },
       },
       plugins: {
         legend: {
