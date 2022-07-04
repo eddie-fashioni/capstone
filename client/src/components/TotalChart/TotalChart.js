@@ -22,7 +22,7 @@ ChartJS.register(
   Legend
 );
 
-function TotalChart() {
+function TotalChart ({ total }) {
   const [chartData, setChartData] = useState({
     datasets: [],
   });

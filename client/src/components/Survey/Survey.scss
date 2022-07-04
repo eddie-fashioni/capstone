@@ -48,6 +48,9 @@
     display: flex;
     justify-content: space-evenly;
     padding: 0 0.85rem;
+    @include tablet {
+      padding: 0 1.5rem;
+    }
 
     &__emoji {
       width: 50px;

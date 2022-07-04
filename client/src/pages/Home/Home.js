@@ -21,11 +21,8 @@ function Home() {
   useEffect(() => {
     axios.get("http://localhost:5000/scores").then((response) => {
       setScores(response.data);
-      console.log(response.data);
-      console.log("use effect called");
     });
   }, [formSubmitted]);
-
 
   return (
     <>

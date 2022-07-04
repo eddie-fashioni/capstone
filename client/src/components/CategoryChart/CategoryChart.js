@@ -22,7 +22,7 @@ ChartJS.register(
   Legend
 );
 
-function CategoryChart() {
+function CategoryChart ({ scores }) {
   const [chartData, setChartData] = useState({
     datasets: [],
   });
@@ -44,6 +44,7 @@ function CategoryChart() {
         "Saturday",
         "Sunday",
       ],
+
       datasets: [
         {
           label: "Sleep",

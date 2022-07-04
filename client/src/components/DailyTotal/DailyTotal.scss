@@ -23,17 +23,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include desktop {
+    padding-right: 8rem;
+  }
 
   &-header {
     margin-bottom: 0;
   }
 
+  &-border {
+    border: 5px solid $primary-color-blue;
+    border-radius: 50%;
+    padding: 5rem 5rem;
+    margin-top: 1rem;
+    @include desktop {
+      margin-top: 3rem;
+    }
+  }
+
   &-total {
     font-size: 40px;
     color: $primary-color-blue;
-    border: 5px solid $primary-color-blue;
-    border-radius: 50%;
-    padding: 3rem;
+    position: absolute;
+    padding-top: 6rem;
+    @include desktop {
+      padding-top: 8rem;
+    }
   }
 
   &-info {
@@ -44,7 +59,11 @@
 }
 
 .flag {
-  margin: 2rem;
+  margin: 10rem 2rem 2rem 2rem;
+  @include desktop {
+    margin: 2rem;
+  }
+
 
   &-container {
     display: flex;

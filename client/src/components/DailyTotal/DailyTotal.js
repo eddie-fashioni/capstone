@@ -2,15 +2,30 @@ import "./DailyTotal.scss";
 import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
 
-
 const DailyTotal = ({ advice, total }) => {
-  
+
   function getRandomItem(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     const item = arr[randomIndex];
 
     return item;
   }
+
+//   const getColor = (score) => {
+//     if (score < 11) return 'red';
+//     if (score < 20) return 'yellow';
+//     if (score >= 20) return 'green';
+//     return '';
+// };
+
+//   let scoreStatement = total;
+// if (scoreStatement < 11) {
+//   return "Bad"
+// } else if (scoreStatement < 20) {
+//   return "OK";
+// } else {
+//   return "Great";
+// }
 
   return (
     <section className="daily-total">
@@ -21,8 +36,10 @@ const DailyTotal = ({ advice, total }) => {
       <div className="desktop-container">
         <div className="score">
           <h1 className="score-header">Total Score</h1>
+          {/* style={{ color: getColor }} */}
+          <div className="score-border"></div>
           <h1 className="score-total">{total}</h1>
-          <p className="score-info">Score based statement here</p>
+          {/* <p className="score-info">{scoreStatement()}</p> */}
         </div>
         <div className="flag">
           {advice.map((advice) => {
