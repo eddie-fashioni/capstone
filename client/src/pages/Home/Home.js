@@ -1,5 +1,5 @@
 import "./Home.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Survey from "../../components/Survey/Survey";
 import DailyTotal from "../../components/DailyTotal/DailyTotal";
@@ -18,17 +18,14 @@ function Home() {
     setAdvice(adviceFromScores);
   };
 
+const formRef = useRef(null);
+
   useEffect(() => {
+    document.title = "Take5 | Home";
     axios.get("http://localhost:5000/scores").then((response) => {
       setScores(response.data);
-      console.log(response.data);
-      console.log("use effect called");
     });
-    // axios.get("http://localhost:5000/advice").then((response) => {
-    //   setAdvice(response.data);
-    // });
   }, [formSubmitted]);
-
 
   return (
     <>
@@ -50,6 +47,7 @@ function Home() {
               className="welcome-start__button"
               onClick={() => {
                 setIsSurveyOpen(true);
+                formRef.current.scrollIntoView()
               }}
             >
               Start The<br></br>Survey!
@@ -60,6 +58,7 @@ function Home() {
 
       {isSurveyOpen && (
         <Survey
+        formRef={formRef}
           setGetStarted={setGetStarted}
           setIsSurveyOpen={setIsSurveyOpen}
           setFormSubmitted={setFormSubmitted}

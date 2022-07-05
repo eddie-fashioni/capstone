@@ -1,20 +1,32 @@
 import "./DailyTotal.scss";
 import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
+import finger from "../../assets/images/finger.svg";
 
-const DailyTotal = ({ scores, advice, total }) => {
-  
-  
-  //function that takes an array as an input and return one random element from array as output
+const DailyTotal = ({ advice, total }) => {
+
   function getRandomItem(arr) {
-    // get random index value
     const randomIndex = Math.floor(Math.random() * arr.length);
-
-    // get random item
     const item = arr[randomIndex];
 
     return item;
   }
+
+//   const getColor = (score) => {
+//     if (score < 11) return 'red';
+//     if (score < 20) return 'yellow';
+//     if (score >= 20) return 'green';
+//     return '';
+// };
+
+//   let scoreStatement = total;
+// if (scoreStatement < 11) {
+//   return "Bad"
+// } else if (scoreStatement < 20) {
+//   return "OK";
+// } else {
+//   return "Great";
+// }
 
   return (
     <section className="daily-total">
@@ -25,8 +37,10 @@ const DailyTotal = ({ scores, advice, total }) => {
       <div className="desktop-container">
         <div className="score">
           <h1 className="score-header">Total Score</h1>
+          {/* style={{ color: getColor }} */}
+          <div className="score-border"></div>
           <h1 className="score-total">{total}</h1>
-          <p className="score-info">Score based statement here</p>
+          {/* <p className="score-info">{scoreStatement()}</p> */}
         </div>
         <div className="flag">
           {advice.map((advice) => {
@@ -42,8 +56,15 @@ const DailyTotal = ({ scores, advice, total }) => {
           })}
         </div>
       </div>
+      <div className="flag-help">
+        <img className="flag-help__image" src={finger} alt="finger pointing right"/>
+        <p className="flag-help__message">
+          Check out the warning flags above and try to implement any feedback.<br></br><br></br>
+          Small changes over time can have a huge impact in the long run!
+        </p>
+      </div>
       <div className="feedback-confirm">
-        <Link to="/dashboard">
+        <Link to="/dash">
           <button className="feedback-confirm__button">
             See My<br></br>Summary!
           </button>
