@@ -1,2 +1,17 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.total-chart {
+  position: relative;
+  height: 20rem;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  @include tablet {
+    height: 25rem;
+    padding: 0 1rem;
+  }
+  @include desktop {
+    height: 30rem;
+    padding: 0 2.5rem;
+  }
+}

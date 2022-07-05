@@ -57,31 +57,38 @@ function TotalChart ({ total }) {
     });
     setChartOptions({
       responsive: true,
-      layout: {
-        padding: 25,
-      },
+      maintainAspectRatio: false,
       scales: {
         y: {
           min: 0,
-          max: 25
+          max: 25,
+          grid: {
+            display: false
+          }
+        },
+        x: {
+          grid: {
+            display: false
+          }
         }
       },
       plugins: {
         legend: {
-          display: "false",
+          display: false,
         },
         title: {
           display: true,
           text: "Weekly Summary for Total Score",
-          padding: 5,
+          padding: 20,
         },
       },
     });
   }, []);
 
   return (
-    <div className="category-chart">
+    <div className="total-chart">
       <Line options={chartOptions} data={chartData} />
+      <h1>{total}</h1>
     </div>
   );
 }

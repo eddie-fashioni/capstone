@@ -4,9 +4,8 @@ import TotalChart from "../../components/TotalChart/TotalChart";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-
 function Dash() {
-  const [scores, setScores] = useState(null);
+  const [scores, setScores] = useState([]);
   const [total, setTotal] = useState(0);
 
   const updatedFeedback = (scoresFromSurvey, totalFromSurvey) => {
@@ -15,10 +14,14 @@ function Dash() {
   };
 
   useEffect(() => {
+    document.title = "Take5 | Dash";
     axios.get("http://localhost:5000/scores").then((response) => {
       setScores(response.data);
+      // console.log(response.data);
     });
   }, []);
+
+  // console.log(scores);
 
   return (
     <>

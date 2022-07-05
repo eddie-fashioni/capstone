@@ -12,6 +12,7 @@ function Survey({
   setIsSurveyOpen,
   setFormSubmitted,
   updatedFeedback,
+  formRef
 }) {
   const [sleep, setSleep] = useState(0);
   const [fatigue, setFatigue] = useState(0);
@@ -56,7 +57,7 @@ function Survey({
 
   return (
     <>
-      <form className="form" onSubmit={submitHandler}>
+      <form className="form" onSubmit={submitHandler} ref={formRef}>
         <div className="form-container">
           <div className="form-section">
             <span className="form-category">Sleep</span>
