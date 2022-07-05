@@ -11,6 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import finger from "../../assets/images/finger.svg";
 
 ChartJS.register(
   CategoryScale,
@@ -30,6 +31,55 @@ function CategoryChart({ scores }) {
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
+    let sleepScores = scores.map((score) => {
+      return score.scores.map((sleep) => {
+        return sleep.sleep;
+      });
+    });
+    let sleepArr = [];
+    sleepScores.forEach((score) => {
+      sleepArr.push(...score.splice(-7));
+    });
+
+    let fatigueScores = scores.map((score) => {
+      return score.scores.map((fatigue) => {
+        return fatigue.fatigue;
+      });
+    });
+    let fatigueArr = [];
+    fatigueScores.forEach((score) => {
+      fatigueArr.push(...score.splice(-7));
+    });
+
+    let stressScores = scores.map((score) => {
+      return score.scores.map((stress) => {
+        return stress.stress;
+      });
+    });
+    let stressArr = [];
+    stressScores.forEach((score) => {
+      stressArr.push(...score.splice(-7));
+    });
+
+    let sorenessScores = scores.map((score) => {
+      return score.scores.map((soreness) => {
+        return soreness.soreness;
+      });
+    });
+    let sorenessArr = [];
+    sorenessScores.forEach((score) => {
+      sorenessArr.push(...score.splice(-7));
+    });
+
+    let motivationScores = scores.map((score) => {
+      return score.scores.map((motivation) => {
+        return motivation.motivation;
+      });
+    });
+    let motivationArr = [];
+    motivationScores.forEach((score) => {
+      motivationArr.push(...score.splice(-7));
+    });
 
     setChartData({
       labels: [
@@ -95,6 +145,15 @@ function CategoryChart({ scores }) {
           grid: {
             display: false,
           },
+          ticks: {
+            callback: function (value, index, ticks) {
+              if (value < 1 || value > 5) {
+                return "";
+              } else {
+                return value;
+              }
+            },
+          },
         },
         x: {
           grid: {
@@ -113,62 +172,21 @@ function CategoryChart({ scores }) {
         },
       },
     });
-  }, []);
-
-  let sleepScores = scores.map((score) => {
-    return score.scores.map((sleep) => {
-      return sleep.sleep;
-    });
-  });
-  let sleepArr = [];
-  sleepScores.forEach((score) => {
-    sleepArr.push(...score.splice(-7));
-  });
-
-  let fatigueScores = scores.map((score) => {
-    return score.scores.map((fatigue) => {
-      return fatigue.fatigue;
-    });
-  });
-  let fatigueArr = [];
-  fatigueScores.forEach((score) => {
-    fatigueArr.push(...score.splice(-7));
-  });
-
-  let stressScores = scores.map((score) => {
-    return score.scores.map((stress) => {
-      return stress.stress;
-    });
-  });
-  let stressArr = [];
-  stressScores.forEach((score) => {
-    stressArr.push(...score.splice(-7));
-  });
-
-  let sorenessScores = scores.map((score) => {
-    return score.scores.map((soreness) => {
-      return soreness.soreness;
-    });
-  });
-  let sorenessArr = [];
-  sorenessScores.forEach((score) => {
-    sorenessArr.push(...score.splice(-7));
-  });
-
-  let motivationScores = scores.map((score) => {
-    return score.scores.map((motivation) => {
-      return motivation.motivation;
-    });
-  });
-  let motivationArr = [];
-  motivationScores.forEach((score) => {
-    motivationArr.push(...score.splice(-7));
-  });
+  }, [scores]);
 
   return (
-    <div className="category-chart">
-      <Line options={chartOptions} data={chartData} />
-    </div>
+    <>
+      <div className="category-chart">
+        <Line options={chartOptions} data={chartData} />
+      </div>
+      <div className="chart-help">
+        <img className="chart-help__image" src={finger} alt="finger pointing right"/>
+        <p className="chart-help__message">
+          You can click the categories on the legend above to only show those selected.<br></br><br></br>
+          Check for any possible links between your scores and focus on improving those areas!
+        </p>
+      </div>
+    </>
   );
 }
 

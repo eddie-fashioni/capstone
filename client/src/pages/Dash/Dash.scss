@@ -4,15 +4,12 @@
 .summary {
   display: flex;
   flex-direction: column;
-  padding: 2rem 0.5rem;
-  @include tablet {
-    padding: 2rem 1rem;
-  }
 
   &-greeting {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0 1rem 0;
   }
 
   &-header {

@@ -22,18 +22,24 @@ ChartJS.register(
   Legend
 );
 
-function TotalChart ({ total }) {
+function TotalChart ({ scores }) {
   const [chartData, setChartData] = useState({
     datasets: [],
   });
 
   const [chartOptions, setChartOptions] = useState({});
 
-  // Add JSON data below 
-  // *last 7 timestamp entries to labels array*
-  // *last 7 total scores to datasets objects*
-
   useEffect(() => {
+    let totalScores = scores.map((score) => {
+      return score.scores.map((total) => {
+        return total.total;
+      });
+    });
+    let totalArr = [];
+    totalScores.forEach((total) => {
+      totalArr.push(...total.splice(-7));
+    });
+
     setChartData({
       labels: [
         "Monday",
@@ -51,7 +57,7 @@ function TotalChart ({ total }) {
           hoverBorderWidth: 10,
           borderColor: "black",
           backgroundColor: "black",
-          data: [14, 12, 15, 17, 11, 13, 16]
+          data: totalArr
         }
       ]
     });
@@ -61,9 +67,19 @@ function TotalChart ({ total }) {
       scales: {
         y: {
           min: 0,
-          max: 25,
+          max: 30,
           grid: {
             display: false
+          },
+          ticks: {
+            callback: function(value, index, ticks) {
+              if (value < 5 || value > 25) {
+                return '';
+              }
+              else {
+                return value;
+              }
+            }
           }
         },
         x: {
@@ -83,12 +99,11 @@ function TotalChart ({ total }) {
         },
       },
     });
-  }, []);
+  }, [scores]);
 
   return (
     <div className="total-chart">
       <Line options={chartOptions} data={chartData} />
-      <h1>{total}</h1>
     </div>
   );
 }

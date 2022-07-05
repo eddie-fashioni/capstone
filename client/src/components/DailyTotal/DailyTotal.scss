@@ -12,7 +12,7 @@
   }
 
   &-message {
-    font-size: 16px;
+    font-size: 14px;
     @include tablet {
       font-size: 20px;
     }
@@ -25,6 +25,7 @@
   align-items: center;
   @include desktop {
     padding-right: 8rem;
+    padding-top: 1rem;
   }
 
   &-header {
@@ -59,7 +60,7 @@
 }
 
 .flag {
-  margin: 10rem 2rem 2rem 2rem;
+  margin: 5rem 2rem 2rem 2rem;
   @include desktop {
     margin: 2rem;
   }
@@ -86,9 +87,32 @@
   }
 
   &-tip {
+    font-size: 14px;
     padding-bottom: 2rem;
     @include tablet {
       font-size: 20px;
+    }
+  }
+}
+
+.flag-help {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  background-color: #fcfbf4;
+
+  &__image {
+    width: 50px;
+    padding-left: 0.5rem;
+  }
+
+  &__message {
+    font-size: 14px;
+    text-align: center;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    @include tablet {
+      font-size: 20px;
+      padding-left: 1.5rem;
     }
   }
 }

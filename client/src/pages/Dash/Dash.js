@@ -6,11 +6,11 @@ import axios from "axios";
 
 function Dash() {
   const [scores, setScores] = useState([]);
-  const [total, setTotal] = useState(0);
+  // const [total, setTotal] = useState(0);
 
   const updatedFeedback = (scoresFromSurvey, totalFromSurvey) => {
     setScores(scoresFromSurvey);
-    setTotal(totalFromSurvey);
+    // setTotal(totalFromSurvey);
   };
 
   useEffect(() => {
@@ -29,11 +29,11 @@ function Dash() {
         <div className="summary-greeting">
         <h2 className="summary-header">Let's take a look, Eddie!</h2>
         <p className="summary-message">
-          Check out your weekly roundup in the charts below. 
+          Check out your weekly roundup below. 
         </p>
         </div>
       <CategoryChart updatedFeedback={updatedFeedback} scores={scores}/>
-      <TotalChart updatedFeedback={updatedFeedback} total={total}/>
+      <TotalChart updatedFeedback={updatedFeedback} scores={scores}/>
       </div>
     </>
   );

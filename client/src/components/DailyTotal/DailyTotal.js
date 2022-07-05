@@ -1,6 +1,7 @@
 import "./DailyTotal.scss";
 import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
+import finger from "../../assets/images/finger.svg";
 
 const DailyTotal = ({ advice, total }) => {
 
@@ -54,6 +55,13 @@ const DailyTotal = ({ advice, total }) => {
             );
           })}
         </div>
+      </div>
+      <div className="flag-help">
+        <img className="flag-help__image" src={finger} alt="finger pointing right"/>
+        <p className="flag-help__message">
+          Check out the warning flags above and try to implement any feedback.<br></br><br></br>
+          Small changes over time can have a huge impact in the long run!
+        </p>
       </div>
       <div className="feedback-confirm">
         <Link to="/dash">
