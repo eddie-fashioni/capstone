@@ -4,19 +4,17 @@ import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  LineElement,
-  PointElement,
+  BarElement,
   Title,
   Tooltip,
   Legend,
 } from "chart.js";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  LineElement,
-  PointElement,
+  BarElement,
   Title,
   Tooltip,
   Legend
@@ -59,7 +57,7 @@ function TotalChart ({ scores }) {
           borderWidth: 1.5,
           hoverBorderWidth: 10,
           borderColor: "black",
-          backgroundColor: "black",
+          backgroundColor: "#e9e9e9",
           data: totalArr
         }
       ]
@@ -106,7 +104,7 @@ function TotalChart ({ scores }) {
 
   return (
     <div className="total-chart">
-      <Line options={chartOptions} data={chartData} />
+      <Bar options={chartOptions} data={chartData} />
     </div>
   );
 }

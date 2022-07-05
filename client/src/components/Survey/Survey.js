@@ -1,5 +1,5 @@
 import "./Survey.scss";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import emoji1 from "../../assets/images/emoji-1.svg";
 import emoji2 from "../../assets/images/emoji-2.svg";
@@ -12,7 +12,6 @@ function Survey({
   setIsSurveyOpen,
   setFormSubmitted,
   updatedFeedback,
-  formRef
 }) {
   const [sleep, setSleep] = useState(0);
   const [fatigue, setFatigue] = useState(0);
@@ -20,6 +19,11 @@ function Survey({
   const [soreness, setSoreness] = useState(0);
   const [motivation, setMotivation] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+
+  const surveyRef = useRef(null);
+  useEffect(() => {
+    surveyRef.current.scrollIntoView({behavior: 'smooth'});
+  }, [])
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -52,7 +56,7 @@ function Survey({
 
   return (
     <>
-      <form className="form" onSubmit={submitHandler} ref={formRef}>
+      <form className="form" onSubmit={submitHandler} ref={surveyRef}>
         <div className="form-container">
           <div className="form-section">
             <span className="form-category">Sleep</span>
