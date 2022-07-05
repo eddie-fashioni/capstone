@@ -11,13 +11,29 @@ const DailyTotal = ({ advice, total }) => {
 
     return item;
   }
+  
 
-//   const getColor = (score) => {
-//     if (score < 11) return 'red';
-//     if (score < 20) return 'yellow';
-//     if (score >= 20) return 'green';
-//     return '';
-// };
+  const getBorderColor = (total) => {
+    if (total >= 20) {
+      return {border: '5px solid green'}
+    } else if (total < 20 && total >= 11) {
+      return {border: '5px solid yellow'}
+    } else {
+      return {border: '5px solid red'}
+    }
+    // if (score < 20) return 'yellow';
+    // if (score >= 20) return 'green';
+    // return '';
+};
+const getColor = (total) => {
+  if (total >= 20) {
+    return {color: 'green'}
+  } else if (total < 20 && total >= 11) {
+    return {color: 'yellow'}
+  } else {
+    return {color: 'red'}
+  }
+};
 
 //   let scoreStatement = total;
 // if (scoreStatement < 11) {
@@ -29,6 +45,7 @@ const DailyTotal = ({ advice, total }) => {
 // }
 
   return (
+    <>
     <section className="daily-total">
       <div className="total">
         <h2 className="total-header">Hey Eddie!</h2>
@@ -37,9 +54,8 @@ const DailyTotal = ({ advice, total }) => {
       <div className="desktop-container">
         <div className="score">
           <h1 className="score-header">Total Score</h1>
-          {/* style={{ color: getColor }} */}
-          <div className="score-border"></div>
-          <h1 className="score-total">{total}</h1>
+          <div className="score-border"style={getBorderColor(total)}></div>
+          <h1 className="score-total" style={getColor(total)}>{total}</h1>
           {/* <p className="score-info">{scoreStatement()}</p> */}
         </div>
         <div className="flag">
@@ -71,6 +87,7 @@ const DailyTotal = ({ advice, total }) => {
         </Link>
       </div>
     </section>
+    </>
   );
 };
 

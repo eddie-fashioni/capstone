@@ -31,6 +31,16 @@ function CategoryChart({ scores }) {
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
+    let timeStamp = scores.map((score) => {
+      return score.scores.map((timestamp) => {
+        return timestamp.timestamp;
+      });
+    });
+    let timeStampArr = [];
+      timeStamp.forEach((timestamp) => {
+      timeStampArr.push(...timestamp.splice(-7));
+    });
+
     let sleepScores = scores.map((score) => {
       return score.scores.map((sleep) => {
         return sleep.sleep;
@@ -82,16 +92,8 @@ function CategoryChart({ scores }) {
     });
 
     setChartData({
-      labels: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-
+      labels:
+        timeStampArr,
       datasets: [
         {
           label: "Sleep",
@@ -180,10 +182,16 @@ function CategoryChart({ scores }) {
         <Line options={chartOptions} data={chartData} />
       </div>
       <div className="chart-help">
-        <img className="chart-help__image" src={finger} alt="finger pointing right"/>
+        <img
+          className="chart-help__image"
+          src={finger}
+          alt="finger pointing right"
+        />
         <p className="chart-help__message">
-          You can click the categories on the legend above to only show those selected.<br></br><br></br>
-          Check for any possible links between your scores and focus on improving those areas!
+          You can click the categories on the legend above to only show those
+          selected.<br></br>
+          Check for any possible links between your scores and focus on
+          improving those areas!
         </p>
       </div>
     </>

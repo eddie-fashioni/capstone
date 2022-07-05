@@ -30,6 +30,16 @@ function TotalChart ({ scores }) {
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
+    let timeStamp = scores.map((score) => {
+      return score.scores.map((timestamp) => {
+        return timestamp.timestamp;
+      });
+    });
+    let timeStampArr = [];
+      timeStamp.forEach((timestamp) => {
+      timeStampArr.push(...timestamp.splice(-7));
+    });
+
     let totalScores = scores.map((score) => {
       return score.scores.map((total) => {
         return total.total;
@@ -41,15 +51,8 @@ function TotalChart ({ scores }) {
     });
 
     setChartData({
-      labels: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
+      labels: 
+      timeStampArr,
       datasets: [
         {
           label: "Total",

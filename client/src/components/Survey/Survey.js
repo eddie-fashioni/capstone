@@ -27,7 +27,7 @@ function Survey({
     axios
       .post("http://localhost:5000/scores", {
         userId: 1234,
-        timestamp: new Date().toLocaleString(),
+        timestamp: new Date().toLocaleDateString(),
         sleep: sleep,
         fatigue: fatigue,
         stress: stress,
@@ -38,12 +38,7 @@ function Survey({
       .then(function (response) {
         let total = sleep + fatigue + stress + soreness + motivation;
         let scores = response.data.scores;
-        console.log(scores.length);
-        console.log(scores);
         let advice = scores[scores.length - 1].feedback;
-        console.log(advice);
-
-        
         setSubmitted(true);
         setGetStarted(false);
         setIsSurveyOpen(false);

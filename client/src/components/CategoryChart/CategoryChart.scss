@@ -20,6 +20,9 @@
   justify-content: center;
   margin: 1rem 0;
   background-color: #fcfbf4;
+  @include tablet {
+    margin: 3rem 0;
+  }
 
   &__image {
     width: 50px;
