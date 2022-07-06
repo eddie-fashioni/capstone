@@ -1,0 +1,176 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+
+  &-header {
+    margin-bottom: 0;
+  }
+
+  &-message {
+    font-size: 14px;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    padding-right: 8rem;
+    padding-top: 1rem;
+  }
+
+  &-header {
+    margin-bottom: 0;
+  }
+
+  &-border {
+    border: 5px solid $primary-color-blue;
+    border-radius: 50%;
+    padding: 5rem 5rem;
+    margin-top: 1rem;
+    @include desktop {
+      margin-top: 3rem;
+    }
+  }
+
+  &-total {
+    font-size: 50px;
+    color: $primary-color-blue;
+    position: absolute;
+    padding-top: 5rem;
+    @include desktop {
+      padding-top: 7rem;
+    }
+  }
+
+  &-info {
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}
+
+.flag {
+  margin: 3rem 2rem 1rem 2rem;
+
+  &-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-image {
+    width: 2.5rem;
+  }
+
+  &-category {
+    text-transform: uppercase;
+    color: $primary-color-blue;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 2rem;
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+
+  &-tip {
+    font-size: 14px;
+    padding-bottom: 2rem;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}
+
+.flag-help {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  background-color: #fcfbf4;
+  @include tablet {
+    padding: 1rem 5rem;
+  }
+  @include desktop {
+    padding: 1rem 10rem;
+  }
+
+  &__image {
+    width: 50px;
+    padding-left: 0.5rem;
+  }
+
+  &__message {
+    font-size: 14px;
+    text-align: center;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    @include tablet {
+      font-size: 20px;
+      padding-left: 1.5rem;
+    }
+  }
+}
+
+.feedback-confirm {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+
+  &__button {
+    font-size: 16px;
+    padding: 1rem 1rem;
+    background-color: $primary-color-blue;
+    color: white;
+    border-radius: 6.25rem;
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    transition: all 0.5s;
+    @include desktop {
+      font-size: 20px;
+      padding: 1.5rem 1.5rem;
+    }
+  }
+  &__button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  &__button:after {
+    position: absolute;
+    opacity: 0;
+    top: 25px;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  &__button:hover {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+
+  &__button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+}
+
+.desktop-container {
+  @include desktop {
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  @include tablet {
+    padding-bottom: 5rem;
+  }
+
+  &-greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0 1rem 0;
+  }
+
+  &-header {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  &-message {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 2rem;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  @include tablet {
+    padding: 2rem 5rem;
+  }
+  @include desktop {
+    padding: 2rem 10rem;
+  }
+}
+
+.nav-user {
+  height: 0;
+
+  &__avatar {
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+    border-radius: 100%;
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
+    @include desktop {
+      width: 3.75rem;
+      height: 3.75rem;
+    }
+
+    &:hover {
+      filter: none;
+      -webkit-filter: grayscale(100);
+      cursor: pointer;
+    }
+  }
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+
+  &__image {
+    width: 4.75rem;
+    padding-bottom: 0.5rem;
+    @include tablet {
+      width: 6rem;
+    }
+  }
+}
+
+.nav-routes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-right: 0.5rem;
+  @include tablet {
+    font-size: 20px;
+    gap: 3.5rem;
+  }
+}
+
+.active {
+  color: $primary-color-blue;
+}

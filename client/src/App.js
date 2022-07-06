@@ -1,21 +1,22 @@
+import "./App.scss";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import PageHeader from "./components/PageHeader/PageHeader.js";
+import Home from "./pages/Home/Home";
+import Dash from "./pages/Dash/Dash";
+
+document.title = "Take5";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <PageHeader />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/dash" component={Dash} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -1,0 +1,52 @@
+[
+  {
+    "category": "sleep",
+    "advice": [
+      "Try taking a warm bath or shower before bed. This might encourage beneficial temperature changes in your body.",
+      "Avoid eating too late in the day. This will ensure that your body has plenty of time to digest your last meal.",
+      "Exercising is crucial to hormone regulation, increasing levels of serotonin and decreasing cortisol.",
+      "It is highly recommended that you stop using electronic devices at least thirty minutes before bed.",
+      "Aromatherapy can improve sleep quality. The use of an oil diffuser, with scents such as lavender and peppermint, have proved successful."
+    ]
+  },
+  {
+    "category": "fatigue",
+    "advice": [
+      "Consider reducing your caffeine intake to minimize the dependancy cycle. Use decaf coffee if you would still like to enjoy the taste.",
+      "Mild dehydration can often lead to fatigue, so make sure to drink plenty of water throughout the day.",
+      "Try to set aside some personal time throughout the week just to relax. A hectic work or social life is not always sustainable.",
+      "Eat smaller meals, more frequently, to maintain a steady blood sugar level. Helping you avoid feeling sluggish after those large meals.",
+      "Physical activity will not only promote better sleep but can also reduce stress levels. Two major factors in combatting fatigue."
+    ]
+  },
+  {
+    "category": "stress",
+    "advice": [
+      "Practice mindfulness or meditation, even for very short periods. This can help to boost your mood and reduce feelings of anxiety.",
+      "Use deep breathing when you are feeling stressed. Inhale through the nose slowly, hold for a few seconds, and exhale slowly through the mouth.",
+      "Spend some time in nature if possible. Parks, forests, and gardens, can all improve mental well-being.",
+      "Cuddling has been shown to be highly effective in reducing stress. A loved one, pet, or teddy bear, can all help us release oxytocin.",
+      "Self-criticism and self-doubt will only fuel your stress. Try to start developing positive self-talk."
+    ]
+  },
+  {
+    "category": "soreness",
+    "advice": [
+      "Always ensure that you are warming up appropriately before exercise. Increasing muscle temperature is crucial to optimal performance.",
+      "Daily mobility and stretching exercises are very important. Focus on the major joints; ankles, hips, and shoulders.",
+      "Foam rolling or massages will promote myofascial release. Loosening up restricted movements and reducing pain.",
+      "Avoid sitting for extended periods of time. Try to get up and move for one or two minutes every half hour.",
+      "Have a soak in the bath using epsom salts. Magnesium is absorbed through the skin, relaxing the muscles."
+    ]
+  },
+  {
+    "category": "motivation",
+    "advice": [
+      "Set yourself some goals that are specific, measurable, and achievable. This will provide you with a 'why' to focus on.",
+      "Do something. It doesn't matter how small or menial the task is, like doing the dishes. You need to get the ball rolling.",
+      "Find somebody to hold you accountable. Having somebody to pick you up on those down days can be a huge help.",
+      "Build yourself an upbeat music playlist. Listen to it when you're showering, commuting, or working out.",
+      "Practice grattitude by journalling or saying outloud some things that you are grateful for each morning."
+    ]
+  }
+]

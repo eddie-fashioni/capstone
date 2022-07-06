@@ -1,0 +1,46 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.category-chart {
+  position: relative;
+  height: 25rem;
+  padding: 0 2rem 1rem 2rem;
+  @include tablet {
+    height: 30rem;
+    padding: 0 5rem;
+  }
+  @include desktop {
+    height: 35rem;
+    padding: 0 15rem;
+  }
+}
+
+.chart-help {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  background-color: #fcfbf4;
+  @include tablet {
+    margin: 3rem 0;
+    padding: 1rem 3rem;
+  }
+  @include desktop {
+    padding: 1rem 12rem;
+  }
+
+  &__image {
+    width: 3.125rem;
+    padding-left: 0.5rem;
+  }
+
+  &__message {
+    font-size: 14px;
+    text-align: center;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    @include tablet {
+      font-size: 20px;
+      padding-left: 1.5rem;
+    }
+  }
+}
