@@ -53,12 +53,12 @@
     }
 
     &__emoji {
-      width: 50px;
+      width: 3.125rem;
       @include tablet {
-        width: 65px;
+        width: 4.0625rem;
       }
       @include desktop {
-        width: 80px;
+        width: 5rem;
       }
     }
   }

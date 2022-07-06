@@ -22,12 +22,11 @@ function Survey({
 
   const surveyRef = useRef(null);
   useEffect(() => {
-    surveyRef.current.scrollIntoView({behavior: 'smooth'});
-  }, [])
+    surveyRef.current.scrollIntoView({ behavior: "smooth" });
+  }, []);
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("Submit Working");
     axios
       .post("http://localhost:5000/scores", {
         userId: 1234,

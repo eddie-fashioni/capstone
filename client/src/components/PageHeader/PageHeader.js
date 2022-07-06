@@ -16,10 +16,7 @@ const PageHeader = () => {
           </Link>
         </div>
         <div className="nav-routes">
-          <NavLink 
-            to="/" 
-            className="nav-routes__home" 
-            activeClassName="active">
+          <NavLink to="/" className="nav-routes__home" activeClassName="active">
             Home
           </NavLink>
           <NavLink

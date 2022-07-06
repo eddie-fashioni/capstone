@@ -188,9 +188,7 @@ function CategoryChart({ scores }) {
         />
         <p className="chart-help__message">
           You can click the categories on the legend above to only show those
-          selected.
-          Check for any possible links between your scores and focus on
-          improving those areas!
+          selected. Check for any possible links between your scores and remember the HIGHER your score, the BETTER!
         </p>
       </div>
     </>

@@ -1,4 +1,5 @@
 import "./DailyTotal.scss";
+import "animate.css";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import flag from "../../assets/images/flag.svg";
@@ -8,7 +9,6 @@ const DailyTotal = ({ advice, total }) => {
   function getRandomItem(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     const item = arr[randomIndex];
-
     return item;
   }
 
@@ -57,7 +57,10 @@ const DailyTotal = ({ advice, total }) => {
         <div className="desktop-container">
           <div className="score">
             <h1 className="score-header">Total Score</h1>
-            <div className="score-border" style={getBorderColor(total)}></div>
+            <div
+              className="score-border animate__animated animate__pulse animate__infinite"
+              style={getBorderColor(total)}
+            ></div>
             <h1 className="score-total" style={getColor(total)}>
               {total}
             </h1>
@@ -82,9 +85,7 @@ const DailyTotal = ({ advice, total }) => {
             src={finger}
             alt="finger pointing right"
           />
-          <p className="flag-help__message">
-          {getFeedback(total)}
-          </p>
+          <p className="flag-help__message">{getFeedback(total)}</p>
         </div>
         <div className="feedback-confirm">
           <Link to="/dash">

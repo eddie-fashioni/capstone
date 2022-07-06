@@ -1,4 +1,5 @@
 import "./TotalChart.scss";
+import "animate.css";
 import { useEffect, useState } from "react";
 import {
   Chart as ChartJS,
@@ -20,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-function TotalChart ({ scores }) {
+function TotalChart({ scores }) {
   const [chartData, setChartData] = useState({
     datasets: [],
   });
@@ -34,7 +35,7 @@ function TotalChart ({ scores }) {
       });
     });
     let timeStampArr = [];
-      timeStamp.forEach((timestamp) => {
+    timeStamp.forEach((timestamp) => {
       timeStampArr.push(...timestamp.splice(-7));
     });
 
@@ -49,45 +50,45 @@ function TotalChart ({ scores }) {
     });
 
     setChartData({
-      labels: 
-      timeStampArr,
+      labels: timeStampArr,
       datasets: [
         {
           label: "Total",
-          borderWidth: 1.5,
-          hoverBorderWidth: 10,
+          borderWidth: 2,
+          hoverBorderWidth: 5,
           borderColor: "black",
           backgroundColor: "#e9e9e9",
-          data: totalArr
-        }
-      ]
+          data: totalArr,
+        },
+      ],
     });
     setChartOptions({
       responsive: true,
       maintainAspectRatio: false,
+      barThickness: 40,
+      hoverBackgroundColor: "#0095ff",
       scales: {
         y: {
           min: 0,
           max: 30,
           grid: {
-            display: false
+            display: false,
           },
           ticks: {
-            callback: function(value, index, ticks) {
+            callback: function (value, index, ticks) {
               if (value < 5 || value > 25) {
-                return '';
-              }
-              else {
+                return "";
+              } else {
                 return value;
               }
-            }
-          }
+            },
+          },
         },
         x: {
           grid: {
-            display: false
-          }
-        }
+            display: false,
+          },
+        },
       },
       plugins: {
         legend: {

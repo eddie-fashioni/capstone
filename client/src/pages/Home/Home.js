@@ -18,7 +18,7 @@ function Home() {
     setAdvice(adviceFromScores);
   };
 
-const formRef = useRef(null);
+  const formRef = useRef(null);
 
   useEffect(() => {
     document.title = "Take5 | Home";
@@ -34,7 +34,9 @@ const formRef = useRef(null);
           <div className="welcome">
             <h2 className="welcome-header">Good Morning Eddie!</h2>
             <p className="welcome-message">
-              Take 5 minutes to check in on yourself...
+              Take 5 minutes to check in on yourself...<br></br>
+              Click the button below and use the emoji scale to rate how you
+              feel!
             </p>
           </div>
           <div className="welcome-start">
@@ -47,7 +49,7 @@ const formRef = useRef(null);
               className="welcome-start__button"
               onClick={() => {
                 setIsSurveyOpen(true);
-                formRef.current.scrollIntoView()
+                formRef.current.scrollIntoView();
               }}
             >
               Start The<br></br>Survey!
@@ -58,7 +60,7 @@ const formRef = useRef(null);
 
       {isSurveyOpen && (
         <Survey
-        formRef={formRef}
+          formRef={formRef}
           setGetStarted={setGetStarted}
           setIsSurveyOpen={setIsSurveyOpen}
           setFormSubmitted={setFormSubmitted}
