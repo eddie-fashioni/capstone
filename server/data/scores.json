@@ -163,18 +163,8 @@
         "fatigue": 4,
         "stress": 3,
         "soreness": 3,
-        "motivation": 4,
-        "total": 17,
-        "feedback": []
-      },
-      {
-        "timestamp": "7/5/2022",
-        "sleep": 4,
-        "fatigue": 3,
-        "stress": 3,
-        "soreness": 3,
         "motivation": 2,
-        "total": 15,
+        "total": 17,
         "feedback": [
           {
             "category": "motivation",

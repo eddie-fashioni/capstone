@@ -17,7 +17,7 @@ const PageHeader = () => {
         </div>
         <div className="nav-routes">
           <NavLink to="/" className="nav-routes__home" activeClassName="active">
-            Home
+            Home.
           </NavLink>
           <NavLink
             to="/dash"
